@@ -1,0 +1,18 @@
+{
+  "name": "netty-socketio-server-sample",
+  "version": "1.0.0",
+  "description": "Sample project for netty socket-io server",
+  "main": "src/nodeclient.js",
+  "scripts": {
+    "nodetest": "node src/nodeclient.js",
+    "browsertest": "node src/server.js"
+  },
+  "author": "Kevin Read <me@kevin-read.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
+    "socket.io-client": "^4.7.4"
+  },
+  "type": "module"
+}

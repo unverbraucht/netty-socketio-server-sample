@@ -1,0 +1,31 @@
+<html>
+<head>
+  <script type="module">
+    import { Manager } from "https://cdn.socket.io/4.7.4/socket.io.esm.min.js";
+
+    const manager = new Manager("/", {
+      autoConnect: false,
+    });
+
+    const socket = manager.socket("/", {
+      auth: {
+        token: "abcd"
+      }
+    });
+
+    socket.on("connect", () => {
+      console.log("Socket connected", socket.connected); // true
+    });
+
+    socket.on("connect_error", (error) => {
+      console.warn('Connect error', error);
+    });
+
+    console.log('opening socket');
+    socket.open();
+  </script>
+</head>
+<body>
+
+</body>
+</html>
